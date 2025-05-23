@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 30% 98%;
+    --foreground: 32 8% 22%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 32 8% 22%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 32 8% 22%;
+
+    --primary: 32 8% 22%;
+    --primary-foreground: 30 30% 98%;
+
+    --secondary: 33 5% 64%;
+    --secondary-foreground: 32 8% 22%;
+
+    --muted: 33 20% 90%;
+    --muted-foreground: 32 5% 42%;
+
+    --accent: 15 48% 56%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 30 10% 88%;
+    --input: 30 10% 88%;
+    --ring: 32 8% 22%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 32 10% 15%;
+    --foreground: 30 15% 90%;
+
+    --card: 32 10% 20%;
+    --card-foreground: 30 15% 90%;
+
+    --popover: 32 10% 20%;
+    --popover-foreground: 30 15% 90%;
+
+    --primary: 30 15% 90%;
+    --primary-foreground: 32 10% 15%;
+
+    --secondary: 33 5% 64%;
+    --secondary-foreground: 30 15% 90%;
+
+    --muted: 32 8% 28%;
+    --muted-foreground: 30 10% 70%;
+
+    --accent: 15 48% 56%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 32 8% 28%;
+    --input: 32 8% 28%;
+    --ring: 30 15% 80%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .animate-blink {
+    animation: blink 2s infinite;
+  }
+
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.3;
+    }
+  }
+}
